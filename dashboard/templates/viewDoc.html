@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>User || Dashboard</title>
+  </head>
+  <body style="background-color: lightgray">
+    {% include 'dashboard/includes/navbar.html' %}
+    <div class="w3-sidebar w3-black w3-bar-block" style="width:15%; background-color: black;">
+        <h3 class="w3-bar-item">🧊 OCR</h3>
+        <a href="{% url 'index' %}" class="w3-bar-item w3-button">🏠 Home</a>
+        <a href="{% url 'users' %}" class="w3-bar-item w3-button">👤 User</a>
+        <a href="{% url 'document' %}" class="w3-bar-item w3-button">📄 Document</a>
+        <a href="#" class="w3-bar-item w3-button" style="padding-left: 19%;">  Log</a>
+        <a href="#" class="w3-bar-item w3-button" style="padding-left: 19%;">  GitHub</a>
+        <a href="#" class="w3-bar-item w3-button">📄 Documentation</a>
+        <a href="#" class="w3-bar-item w3-button">⚙️ Setting</a>
+    </div>
+
+    <div class="card" style="margin-left: 17%; margin-top: 3%; margin-right: 2%; ">
+        <div class="card-body">
+            
+            <hr style="height: 2px; color:black;background-color:black; text-align:left;margin-left:0">
+
+            <center>
+            <img src="https://www.qries.com/images/banner_logo.png" width="150px" height="150px">
+            </center>
+
+            <table class="table" style="width: 100%; margin-top: 50px;">
+                <thead>
+                  <tr style="background-color: cadetblue;">
+                    <th scope="col" style="font-size: 12PX;">#</th>
+                    <th scope="col" style="font-size: 13PX;">NAME</th>
+                    <th scope="col" style="font-size: 13PX;">FATHER'S NAME</th>
+                    <th scope="col" style="font-size: 13PX;">ADDRESS</th>
+                    <th scope="col" style="font-size: 13PX;">AADHAR NO.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>XYZ</td>
+                    <td>XYZ</td>
+                    <td>Addr</td>
+                    <td>1234567891011</td>
+                    
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

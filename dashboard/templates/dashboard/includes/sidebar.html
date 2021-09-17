@@ -1,0 +1,47 @@
+<div class="sidebar">
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a target="_blank" href="/" class="simple-text logo-mini" style="font-size: 25px;">
+        🧊
+      </a>
+      <a target="_blank" href="/" class="simple-text logo-normal" style="font-size: 25px;">
+        OCR
+      </a>
+    </div>
+
+    <ul class="nav">
+      <li class="{% if 'icons' in segment %} active {% endif %}">
+        <a href="{% url 'index' %}">
+          <!-- <i class="tim-icons icon-badge"></i> -->
+          <p style="font-size: 20px; display: inline;">🏠</p>
+          <p style="display: inline; font-size: 15px;">Home</p><br>
+        </a>
+      </li>
+
+      <li class="{% if 'icons' in segment %} active {% endif %}">
+        <a href="{% url 'users' %}">
+          <!-- <i class="tim-icons icon-badge"></i> -->
+          <p style="font-size: 20px; display: inline; margin-top: 35px;">👤</p>
+          <p style="display: inline; font-size: 15px;">User</p><br>
+        </a>
+      </li>
+
+      <li class="{% if 'icons' in segment %} active {% endif %}">
+        <a href="{% url 'document' %}">
+          <!-- <i class="tim-icons icon-badge"></i> -->
+          <p style="font-size: 20px; display: inline; margin-top: 35px;">📄</p>
+          <p style="display: inline; font-size: 15px;">Document</p><br>
+        </a>
+      </li>
+
+      <li class="{% if 'icons' in segment %} active {% endif %}">
+        <a href="#">
+          <!-- <i class="tim-icons icon-badge"></i> -->
+          <p style="font-size: 20px; display: inline; margin-top: 35px;">⚙️</p>
+          <p style="display: inline; font-size: 15px;">Setting</p>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</div>

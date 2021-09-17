@@ -1,0 +1,138 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>User || Dashboard</title>
+  </head>
+  <body style="background-color: lightgray">
+    {% include 'dashboard/includes/navbar.html' %}
+    <div class="w3-sidebar w3-black w3-bar-block" style="width:15%; background-color: black;">
+        <h3 class="w3-bar-item">🧊 OCR</h3>
+        <a href="{% url 'index' %}" class="w3-bar-item w3-button">🏠 Home</a>
+        <a href="{% url 'users' %}" class="w3-bar-item w3-button">👤 User</a>
+        <a href="{% url 'document' %}" class="w3-bar-item w3-button">📄 Document</a>
+        <a href="#" class="w3-bar-item w3-button" style="padding-left: 19%;">  Log</a>
+        <a href="#" class="w3-bar-item w3-button" style="padding-left: 19%;">  GitHub</a>
+        <a href="#" class="w3-bar-item w3-button">📄 Documentation</a>
+        <a href="#" class="w3-bar-item w3-button">⚙️ Setting</a>
+    </div>
+
+    <div class="card" style="margin-left: 17%; margin-top: 3%; margin-right: 2%; ">
+        <div class="card-body">
+            <!-- <form action="{% url 'addDoc' %}" class="form-inline my-2 my-sm-0 mx-2">
+                <h5 class="card-title" style="font-size: 20px;">Document</h5>
+                <button class="btn btn-primary my-2 my-sm-0" type="submit" style="margin-left: 80%;">Add</button>
+            </form> -->
+            <hr style="height: 2px; color:black;background-color:black; text-align:left;margin-left:0"> 
+
+
+            <!-- <form class="form-inline my-2 my-sm-0">
+                <div class="input-group input-group-sm mb-3">
+                    <span style="display: inline;">
+                        <h5 class="card-title" style="margin-right: 2%; display: inline;">Shows</h5>
+                        <input type="text" style="width: 20%; display: inline;" class="form-control">
+                        <p class="card-text" style="margin-left: 1%; display: inline;">entries</p>
+                    </span>
+                </div>
+
+
+                <div class="input-group-sm mb-3" style="margin-left: -90px;">
+                    <h5 class="card-title" style="display: inline;" >Name: </h5>
+                    <input type="text" style="display: inline;" placeholder="Select for Username" class="form-control">
+                </div>
+                  
+
+
+                <div class="input-group-sm mb-3" style="display: inline;">
+                    <h5 class="card-title" style="display: inline; margin-left: 30px;" >CreatedAt: </h5>
+                    <input type="date" style="display: inline;" class="form-control" value="2012-04-05">
+                    <div class="input-group-addon" style="margin-left: 10px; display: inline;"> to </div>
+                    <input type="date" style="display: inline; margin-left: 10px;" class="form-control" value="2012-04-19">
+                    <button class="btn btn-primary" style="display: inline; margin-left: 20px;" type="submit">Submit</button>
+                </div>
+
+            </form> -->
+            
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                <input type="file" class="form-control" id="inputGroupFile01">
+            </div>
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Name
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Father's Name
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Aadhar Number
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Date of birth
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Address
+                </label>
+            </div>
+
+            <!-- <table class="table" style="width: 100%;">
+                <thead>
+                  <tr style="background-color: cadetblue;">
+                    <th scope="col" style="font-size: 13PX;">ID</th>
+                    <th scope="col" style="font-size: 13PX;">Document</th>
+                    <th scope="col" style="font-size: 13PX;">Country</th>
+                    <th scope="col" style="font-size: 13PX;">Department</th>
+                    <th scope="col" style="font-size: 13PX;">Year</th>
+                    <th scope="col" style="font-size: 13PX;">Image</th>
+                    <th scope="col" style="font-size: 13PX;">Created</th>
+                    <th scope="col" style="font-size: 13PX;">Total Scans</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Aadhaar</td>
+                    <td>India</td>
+                    <td>Finance</td>
+                    <td>2019</td>
+                    <td><img src="https://www.qries.com/images/banner_logo.png"/ width="50px" height="50px"></td>
+                    <td>10/10/2010</td>
+                    <td>503</td>
+                  </tr>                  
+                </tbody>
+            </table> -->
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
