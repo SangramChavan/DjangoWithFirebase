@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center" id="uploader">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">UPLOAD KYC</h5>
+            </div>
+            <form action="/upload" method="POST" enctype="multipart/form-data" id="form">
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_table }}
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-fill btn-primary">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
